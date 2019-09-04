@@ -3,8 +3,11 @@ const $ = require("jquery");
 
 window.addEventListener('load', async function() {
 
-    if (typeof web3 !== 'undefined') {
-        // Supports injected Ethereum providers.
+    if (typeof ethereum !== 'undefined') {
+        // Supports EIP-1102 injected Ethereum providers.
+        window.web3 = new Web3(ethereum);
+    } else if (typeof web3 !== 'undefined') {
+        // Supports legacy injected Ethereum providers.
         window.web3 = new Web3(web3.currentProvider);
     } else {
         // Your preferred fallback.
@@ -42,10 +45,20 @@ window.addEventListener('load', async function() {
         }
     };
 
-    try {
-        displayMyAccounts(await window.web3.eth.getAccounts());
-    } catch(error) {
-        $("#myAddresses").html(`Failed to get your addresses: ${error}`);
+    if (typeof ethereum !== 'undefined') {
+        $("#allowMyAddresses").click(async () => {
+            try {
+                displayMyAccounts(await ethereum.enable());
+            } catch(error) {
+                $("#allowStatus").html("You did not allow to access your addresses");
+            }
+        });
+    } else {
+        try {
+            displayMyAccounts(await window.web3.eth.getAccounts());
+        } catch(error) {
+            $("#myAddresses").html(`Failed to get your addresses: ${error}`);
+        }        
     }
 
 });
