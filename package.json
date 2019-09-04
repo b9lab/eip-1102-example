@@ -1,0 +1,22 @@
+{
+  "name": "eip1102_example",
+  "version": "1.0.0",
+  "description": "Simple migration of Web3 to EIP-1102",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
+  },
+  "author": "B9lab",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "3.4.1",
+    "web3": "1.2.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "5.0.4",
+    "webpack": "4.39.3",
+    "webpack-cli": "3.3.7",
+    "webpack-dev-server": "3.8.0"
+  }
+}

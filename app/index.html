@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Ether Balances</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ether balances</h1>
+
+    <table spacing="0">
+        <thead>
+            <tr>
+                <th>Address</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+
+        <tbody id="myAddresses">
+            <tr><td>Loading your addresses</td></tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <td><input type="text" id="otherAddress"></td>
+                <td id="otherBalance"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span id="connected">Setting up Ethereum</span>
+
+    <script src="app.js"></script>
+</body>
+</html>
