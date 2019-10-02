@@ -1,6 +1,8 @@
 # Simple Ethereum Dapp
 
-It showcases how to access an injected Ethereum provider, in this case the EIP-1102-complicant `window.ethereum`, alongside the legacy `window.web3`.
+Supports the [Status EIP-1102 Tutorial](http://www.status.im/developer_tools/run_on_status/tutorial_2_must_do.html).
+
+Showcases how to access an injected Ethereum provider, in this case the EIP-1102-compliant `window.ethereum`, alongside the legacy `window.web3`.
 
 The GUI displays:
 
