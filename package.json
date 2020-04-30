@@ -10,7 +10,7 @@
   "author": "B9lab",
   "license": "ISC",
   "dependencies": {
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "web3": "1.2.1"
   },
   "devDependencies": {
